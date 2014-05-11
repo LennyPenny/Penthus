@@ -1,4 +1,5 @@
 setfenv(1, getfenv(3)) --setting the fenv to the one we created
+
 class "bHop" {
 	public {
 		__construct = function(self)
