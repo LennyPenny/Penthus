@@ -1,9 +1,9 @@
 setfenv(1, getfenv(3)) --setting the fenv to the one we created
 
-class "bHop" {
+class "bhop" {
 	public {
 		__construct = function(self)
-			hook.Add("CreateMove", "penthus_bHop", self.jump)
+			hook.Add("CreateMove", "penthus_bhop", self.jump)
 		end;
 	};
 
