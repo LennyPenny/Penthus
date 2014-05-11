@@ -17,7 +17,7 @@ class "penthus" {
 			return self.version
 		end;
 
-		bHop = bHop.new();
+		bhop = bhop.new();
 	};
 
 	private {
