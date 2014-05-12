@@ -6,18 +6,24 @@ name = "penthus" --don't reference this, use penthus.getName()
 
 
 include(name.."/lib/lib.lua")
-include(name.."/modules/modules.lua")
 
 class "penthus" {
 	public {
+		static {
+			mods = {};
+		};
+
+		mod = {};
+		add = function(self, name, instance)
+			self.mod[name] = instance
+		end;
+
 		getName = function() 
 			return self.name
 		end;
 		getVersion = function()
 			return self.version
 		end;
-
-		bhop = bhop.new();
 	};
 
 	private {
@@ -25,4 +31,13 @@ class "penthus" {
 		version = "0";
 	};
 }
+
 penthus = penthus.new()
+
+include(name.."/modules/modules.lua")
+
+/*for k, mod in pairs(penthus.mod) do
+	if mod.___onLoaded then
+		mod:___onLoaded()
+	end
+end*/
