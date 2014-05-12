@@ -5,7 +5,7 @@ for k, modul in pairs(modules) do --loading the file and saving the names of the
 	if modul == "modules.lua" then continue end
 	include(name.."/modules/"..modul)
 
-	modul = string.TrimRight(modul, "lua")
+	modul = string.TrimRight(modul, ".lua")
 	table.insert(penthus.mods, modul)
 end
 

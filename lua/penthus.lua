@@ -35,9 +35,3 @@ class "penthus" {
 penthus = penthus.new()
 
 include(name.."/modules/modules.lua")
-
-/*for k, mod in pairs(penthus.mod) do
-	if mod.___onLoaded then
-		mod:___onLoaded()
-	end
-end*/
