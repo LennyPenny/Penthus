@@ -5,16 +5,16 @@ for k, modul in pairs(modules) do --loading the file and saving the names of the
 	if modul == "modules.lua" then continue end
 	include(name.."/modules/"..modul)
 
-	modul = string.TrimRight(modul, ".lua")
+	modul = string.Replace(modul, ".lua", "")
 	table.insert(penthus.mods, modul)
 end
 
 for k, modul in pairs(penthus.mods) do --initializing the modules
-	penthus:add(modul, _G[modul])
+	penthus:add(modul, _G[modul].new())
 end
 
-for k, mod in pairs(penthus.mod) do --all modules are now initialized and can begin operation
-	if mod.___onLoaded then
-		mod:___onLoaded()
+for k, modu in pairs(penthus.mod) do --all modules are now initialized and can begin operation
+	if modu.___onLoaded then
+		modu:___onLoaded()
 	end
 end
