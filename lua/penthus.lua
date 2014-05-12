@@ -33,4 +33,4 @@ class "penthus" {
 }
 penthus = penthus.new()
 
-include(name.."/modules/modules.lua")
+include(penthus:getName().."/modules/modules.lua")
