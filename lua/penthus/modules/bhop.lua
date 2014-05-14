@@ -3,7 +3,8 @@ setfenv(1, getfenv(3)) --setting the fenv to the one we created
 class "bhop" {
 	public {
 		___onLoaded = function(self)
-			penthus.mod.settings:add("bhop", "toggle", "binary", self.toggle)
+			penthus.mod.settings:add("bhop", {name = "toggle", typ = "Boolean"}, self.toggle)
+			penthus.mod.settings:add("lol", {name = "idk", typ = "Boolean"}, self.toggle)
 		end;
 
 		toggle = function(data)
