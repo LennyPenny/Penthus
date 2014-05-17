@@ -1,6 +1,9 @@
 setfenv(1, getfenv(3))
 
 class "debugMenu" {
+	public {
+		___onLoaded = function(self) concommand.Add("pen_debug", self.open) end;
+	};
 	private {
 		frame = "";
 		propPanel = "";
@@ -30,6 +33,8 @@ class "debugMenu" {
 					self.propRows[cat][row.options.name] = self.propPanel:CreateRow(cat, row.options.name)
 					self.propRows[cat][row.options.name]:Setup(row.options.typ)
 					self.propRows[cat][row.options.name]:SetValue(false)
+
+					self.propRows[cat][row.options.name].DataChanged = function(_, val) row.callback(val) end --this was fucking hard to find out, but I added it to the wiki<3
 				end
 			end
 		end;

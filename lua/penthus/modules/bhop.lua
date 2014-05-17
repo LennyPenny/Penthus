@@ -4,7 +4,6 @@ class "bhop" {
 	public {
 		___onLoaded = function(self)
 			penthus.mod.settings:add("bhop", {name = "toggle", typ = "Boolean"}, self.toggle)
-			penthus.mod.settings:add("lol", {name = "idk", typ = "Boolean"}, self.toggle)
 		end;
 
 		toggle = function(data)
@@ -14,9 +13,10 @@ class "bhop" {
 
 	private {
 		toggler = function(self, data)
-			if data then
+			if data == 1 then
 				self:turnOn()
-			else
+
+			elseif data == 0 then
 				self:turnOff()
 			end
 		end;
