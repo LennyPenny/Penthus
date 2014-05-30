@@ -1,4 +1,4 @@
-setfenv(1, getfenv(3)) --setting the fenv to the one we created
+--setfenv(1, getfenv(3)) --setting the fenv to the one we created
 
 class "settings" {
 	public {
@@ -17,3 +17,5 @@ class "settings" {
 		settings = {}
 	};
 }
+
+AD = "iqerwuioweruweruweruweruweior"

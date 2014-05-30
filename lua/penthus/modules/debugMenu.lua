@@ -1,4 +1,4 @@
-setfenv(1, getfenv(3))
+--setfenv(1, getfenv(3))
 
 class "debugMenu" {
 	public {
