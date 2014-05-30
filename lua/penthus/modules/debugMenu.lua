@@ -1,5 +1,3 @@
---setfenv(1, getfenv(3))
-
 class "debugMenu" {
 	public {
 		___onLoaded = function(self) concommand.Add("pen_debug", self.open) end;

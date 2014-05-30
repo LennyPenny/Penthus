@@ -1,5 +1,3 @@
---setfenv(1, getfenv(3)) --setting the fenv to the one we created
-
 class "database" {
 	public {
 		___onLoaded = function(self)

@@ -1,5 +1,3 @@
---setfenv(1, getfenv(3)) --setting the fenv to the one we created
-
 class "settings" {
 	public {
 		add = function(self, cat, options, callback) -- example: settings:add("bhop", {name = "Boolean", typ = "Boolean"}, func) (typs: Boolean (note: it will be a number in the callback), Float, Generic (text), Int, VectorColor)
@@ -17,5 +15,3 @@ class "settings" {
 		settings = {}
 	};
 }
-
-AD = "iqerwuioweruweruweruweruweior"
