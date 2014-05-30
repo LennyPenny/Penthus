@@ -1,7 +1,4 @@
 class "debugMenu" {
-	public {
-		___onLoaded = function(self) concommand.Add("pen_debug", self.open) end;
-	};
 	private {
 		frame = "";
 		propPanel = "";
