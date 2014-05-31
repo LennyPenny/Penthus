@@ -29,7 +29,7 @@ class "bhop" {
 		jump = function(cmd)
 			if not cmd:KeyDown(IN_JUMP) then return end --do we even want to bhop
 			if LocalPlayer():IsOnGround() then return end --would we wanna jump
-			if LocalPlayer():GetMoveType() == MOVETYPE_NOCLIP or LocalPlayer():WaterLevel() > 2 then return end --does it make sense to jump?
+			if LocalPlayer():GetMoveType() == MOVETYPE_NOCLIP or LocalPlayer():WaterLevel() >= 2 then return end --does it make sense to jump?
 
 			cmd:SetButtons(cmd:GetButtons() - IN_JUMP) --while in air, don't jump
 		end;
