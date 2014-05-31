@@ -27,7 +27,7 @@ class "flashlightSpam" {
 		end;
 
 		spammer = function(cmd)
-			if input.IsKeyDown(KEY_F) then --no IN_ enum for flashlights:( but who uses smth else than f anyway
+			if input.IsKeyDown(KEY_F) and not LocalPlayer():IsTyping() then --no IN_ enum for flashlights:( but who uses smth else than f anyway
 				cmd:SetImpulse(100)
 			end
 		end;
