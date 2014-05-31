@@ -1,5 +1,5 @@
 local newFenv = {} --this will be our new fenv (it's local so anti cheats can't touch it)
-local ourOG = _G
+local ourOG = table.Copy(_G)
 setmetatable(newFenv, {__index = ourOG}) --copying _G into our new fenv
 setfenv(1, newFenv) --making our new fenv active for the rest of the file
 
