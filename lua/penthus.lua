@@ -1,5 +1,6 @@
 local newFenv = {} --this will be our new fenv (it's local so anti cheats can't touch it)
-setmetatable(newFenv, {__index = _G}) --copying _G into our new fenv
+local ourOG = _G
+setmetatable(newFenv, {__index = ourOG}) --copying _G into our new fenv
 setfenv(1, newFenv) --making our new fenv active for the rest of the file
 
 name = "penthus" --don't reference this, use penthus.getName()
