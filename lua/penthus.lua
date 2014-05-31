@@ -6,6 +6,7 @@ name = "penthus" --don't reference this, use penthus.getName()
 
 function penthusInclude(path)
 	local fil = file.Read("addons/Penthus/lua/"..path, "MOD") --this will make sure we can load, no matter what
+	fil = fil or file.Read(path, "LUA") --merging directly into the lua folder is more convienent for devwork
 	fil = "setfenv(1, getfenv(3)) "..fil --this will set the fenv of any file we load, to this fenv we have right here
 
 	RunStringEx(fil, path) --making sure we can still read errors
