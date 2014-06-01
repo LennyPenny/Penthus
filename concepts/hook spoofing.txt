@@ -1,0 +1,21 @@
+I recently came up with this but then was told that it already had been don in oubhack, but w/e
+
+We all know the problem that anti cheats can just do hook.GetTable and ban you if you have a foreign hook
+We could solve this problem by just detouring hook.GetTable, but that only works if run before the anti cheat
+
+Another approach to this problem is hook spoofing: 
+Basically we disguise ourselfves as a legal hook
+
+Example: 
+The gamemode adds a Think hook to call some random function
+1. We just do hook.GetTable and see that there's a think hook and also waht function it is pointing to
+2. We remove the original hook but keep a refernce to the function it was calling
+3. We add a hook with the name of the origincal function that calls a function that firlst calls our function with all args and then calls the original function
+
+That way they will never know we edited a hook 
+
+Pros: 
+- Public anti cheats don't detect it atm
+
+Cons: 
+- there may not be a hook of the type we are trying to spoof
