@@ -8,9 +8,9 @@ Basically we disguise ourselfves as a legal hook
 
 Example: 
 The gamemode adds a Think hook to call some random function
-1. We just do hook.GetTable and see that there's a think hook and also waht function it is pointing to
-2. We remove the original hook but keep a refernce to the function it was calling
-3. We add a hook with the name of the origincal function that calls a function that firlst calls our function with all args and then calls the original function
+1. We just do hook.GetTable and see that there's a think hook and also whatt function it is pointing to
+2. We remove the original hook but keep a reference to the function it was calling
+3. We add a hook with the name of the hook we removed that calls a function that first calls our function with all args and then calls the original function
 
 That way they will never know we edited a hook 
 
