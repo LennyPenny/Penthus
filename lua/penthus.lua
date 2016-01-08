@@ -30,7 +30,7 @@ class "penthus" {
 			self.mod[name] = instance
 		end;
 
-		getName = function() 
+		getName = function()
 			return self.name
 		end;
 		getVersion = function()
@@ -47,4 +47,4 @@ penthus = penthus.new()
 
 penthusInclude(penthus:getName().."/modules/modules.lua")
 
-penthusInclude(penthus:getName.."/postLoad/postLoad.lua", false)
+penthusInclude(penthus:getName().."/postLoad/postLoad.lua", false)
